@@ -92,8 +92,8 @@
 │   Error Handler     │ [Retângulo vermelho]
 │   write(2, "Error") │
 └─────────────┬───────┘
-              │
-              ▼
+              │ 
+              ▼ 
 ┌─────────────────────┐
 │    exit(1)          │ [Oval vermelho]
 └─────────────────────┘
