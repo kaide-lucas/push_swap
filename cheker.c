@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   cheker.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 15:30:33 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/11/11 12:19:54 by kaidda-s         ###   ########.fr       */
+/*   Created: 2025/11/11 18:44:22 by kaidda-s          #+#    #+#             */
+/*   Updated: 2025/11/11 18:53:31 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "push_swap.h"
 
-/* declarar a função que implementamos */
-int	is_valid_token(const char *s);
-
-static void test(const char *s)
+int has_duplicates(t_stack *stack)
 {
-	printf("\"%s\" -> %s\n", s, is_valid_token(s) ? "VALID" : "INVALID");
+	
 }
 
-int main(void)
+void	normalize_values(t_stack *stack)
 {
-	test("123");
-	test("+123");
-	test("-0");
-	test("");
-	test("+");
-	test("-");
-	test("12a3");
-	test(" 123");
-	test("007");
-	return 0;
+	
 }

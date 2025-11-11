@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_valid_token.c                                   :+:      :+:    :+:   */
+/*   is_valid_input.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 14:57:16 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/10/28 16:33:13 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/11/11 11:41:41 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,6 @@ int is_valid_input(const char *s)
 		i++;
 	}
 	return (1);
-}
-
-int ft_isspace(int c)
-{
-	return (c == ' ' || c == '\n' || c == '\t');
 }
 
 static const char *skip_whitespace(const char *s)

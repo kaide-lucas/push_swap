@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   stack_utilis.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 15:30:33 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/10/28 15:30:36 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/11/11 18:10:04 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,38 @@ t_stack *stack_new(int value)
 
     return (new);
 }
+
+t_stack *stack_last(t_stack *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack->next != NULL)
+		stack = stack->next;
+	return (stack);
+}
+
+void	stack_add_back(t_stack **stack, t_stack *new)
+{
+	t_stack	*last;
+
+	if (*stack == NULL)
+		{
+			*stack = new;
+			return;
+		}
+	last = stack_last(*stack);
+	last->next = new;
+}
+
+void	stack_clear(t_stack **stack)
+{
+	t_stack *temp;
+
+	while (*stack)
+	{
+		temp = (*stack)->next;
+		free(*stack);
+		*stack = temp;
+	}
+}
+
