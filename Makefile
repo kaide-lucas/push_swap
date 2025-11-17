@@ -4,7 +4,17 @@ LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 INCLUDES = -I$(LIBFT_DIR)
 
-SRCS = main.c push_swap.c
+SRCS = main.c \
+       parse_input.c \
+       is_valid_input.c \
+       stack_utilis.c \
+       cheker.c \
+       push.c \
+       swap.c \
+       rotate.c \
+       reverse.c \
+       push_swap.c
+
 OBJS = $(SRCS:.c=.o)
 NAME = push_swap
 

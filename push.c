@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaidda-s <kaidda-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 15:30:33 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/11/15 21:01:24 by kaidda-s         ###   ########.fr       */
+/*   Created: 2025/11/14 18:59:57 by kaidda-s          #+#    #+#             */
+/*   Updated: 2025/11/15 12:44:56 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+/* PUSH: move o primeiro elemento de uma pilha para outra */
+void	push(t_stack **src, t_stack **dst)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	t_stack	*tmp;
 
-	if (argc < 2)
-		return (0);
-	stack_a = parse_arguments(argc, argv);
-	if (!stack_a)
-	{
-		write(2, "Error\n", 6);
-		return (1);
-	}
-	stack_b = NULL;
-	push_swap(&stack_a, &stack_b);
-	stack_clear(&stack_a);
-	stack_clear(&stack_b);
-	return (0);
+	if (!src || !*src)
+		return ;
+	tmp = *src;
+	*src = (*src)->next;
+	tmp->next = *dst;
+	*dst = tmp;
+}
+
+void	pa(t_stack **stack_a, t_stack **stack_b)
+{
+	push(stack_b, stack_a);
+	write(1, "pa\n", 3);
+}
+
+void	pb(t_stack **stack_a, t_stack **stack_b)
+{
+	push(stack_a, stack_b);
+	write(1, "pb\n", 3);
 }

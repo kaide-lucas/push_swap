@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cheker.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kaidda-s <kaidda-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 18:44:22 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/11/11 18:53:31 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/11/14 21:08:35 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,46 @@
 
 int has_duplicates(t_stack *stack)
 {
-	
+	t_stack	*current;
+	t_stack	*compare;
+
+	if (!stack)
+		return (0);
+	current = stack;
+	while (current)
+	{
+		compare = current->next;
+		while (compare)
+		{
+			if (current->value == compare->value)
+				return (1);
+			compare = compare->next;
+		}
+		current = current->next;
+	}
+	return (0);
 }
 
 void	normalize_values(t_stack *stack)
 {
-	
+	t_stack	*current;
+	t_stack	*compare;
+	int		count;
+
+	if (!stack)
+		return;
+	current = stack;
+	while (current)
+	{
+		count = 0;
+		compare = stack;
+		while (compare)
+		{
+			if (compare->value < current->value)
+				count++;
+			compare = compare->next;
+		}
+		current->index = count;
+		current = current->next;
+	}
 }

@@ -1,5 +1,6 @@
 {
 	"files.associations": {
 		"stdio.h": "c"
-	}
+	},
+	"cmake.sourceDirectory": "/home/kaide/projetos/push_swap/push_swap_visualizer"
 }
