@@ -6,7 +6,7 @@
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 15:30:33 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/11/11 13:42:56 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/11/17 13:13:40 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,5 @@ t_stack	*parse_arguments(int argc, char **argv)
 	if (has_duplicates(stack_a))
 		return (error_exit(&stack_a));
 	normalize_values(stack_a);
-		return (stack_a);
+	return (stack_a);
 }

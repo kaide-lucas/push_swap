@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   cheker.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kaidda-s <kaidda-s@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 18:44:22 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/11/14 21:08:35 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/11/17 13:11:50 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int has_duplicates(t_stack *stack)
+int	has_duplicates(t_stack *stack)
 {
 	t_stack	*current;
 	t_stack	*compare;
@@ -41,7 +41,7 @@ void	normalize_values(t_stack *stack)
 	int		count;
 
 	if (!stack)
-		return;
+		return ;
 	current = stack;
 	while (current)
 	{

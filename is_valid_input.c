@@ -6,16 +6,16 @@
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 14:57:16 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/11/11 11:41:41 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/11/17 13:07:21 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int is_valid_input(const char *s)
+int	is_valid_input(const char *s)
 {
 	int	i;
-	
+
 	if (s == NULL)
 		return (0);
 	i = 0;
@@ -32,19 +32,19 @@ int is_valid_input(const char *s)
 	return (1);
 }
 
-static const char *skip_whitespace(const char *s)
+static const char	*skip_whitespace(const char *s)
 {
 	while (ft_isspace((unsigned char)*s))
 		s++;
 	return (s);
 }
 
-static int parse_sign_and_advance(const char **s)
+static int	parse_sign_and_advance(const char **s)
 {
 	int	sign;
 
 	sign = 1;
-	if(**s == '+' || **s == '-')
+	if (**s == '+' || **s == '-')
 	{
 		if (**s == '-')
 			sign = -1;
@@ -54,7 +54,8 @@ static int parse_sign_and_advance(const char **s)
 	}
 	return (sign);
 }
-static int str_to_number(const char *s, int sign, int *out)
+
+static int	str_to_number(const char *s, int sign, int *out)
 {
 	long long	ac;
 	long long	val;
@@ -71,10 +72,10 @@ static int str_to_number(const char *s, int sign, int *out)
 		s++;
 	}
 	*out = (int)val;
-	return (1); 
+	return (1);
 }
 
-int safe_atoi(const char *s, int *out)
+int	safe_atoi(const char *s, int *out)
 {
 	int	n;
 
