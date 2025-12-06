@@ -8,7 +8,7 @@ SRCS = main.c \
        parse_input.c \
        is_valid_input.c \
        stack_utilis.c \
-       cheker.c \
+       normalize.c \
        push.c \
        swap.c \
        rotate.c \

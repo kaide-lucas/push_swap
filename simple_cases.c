@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   simple_cases.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/14 18:59:57 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/11/17 13:20:12 by kaidda-s         ###   ########.fr       */
+/*   Created: 2025/12/06 17:18:45 by kaidda-s          #+#    #+#             */
+/*   Updated: 2025/12/06 17:26:20 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_stack **src, t_stack **dst)
+static void sort_two(t_stack **stack_a)
 {
-	t_stack	*tmp;
-
-	if (!src || !*src)
-		return ;
-	tmp = *src;
-	*src = (*src)->next;
-	tmp->next = *dst;
-	*dst = tmp;
+	if ((*stack_a) -> value > (*stack_a) -> next -> value)
+		sa(stack_a);
 }
 
-void	pa(t_stack **stack_a, t_stack **stack_b)
+static void sort_three()
 {
-	push(stack_b, stack_a);
-	write(1, "pa\n", 3);
+	
 }
-
-void	pb(t_stack **stack_a, t_stack **stack_b)
+static void sort_four();
 {
-	push(stack_a, stack_b);
-	write(1, "pb\n", 3);
+	
+}
+static void sort_five();
+{
+	
 }
