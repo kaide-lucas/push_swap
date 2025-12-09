@@ -6,7 +6,7 @@
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:30:14 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/11/17 12:50:09 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/12/09 15:24:43 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,10 @@ void	rrr(t_stack **stack_a, t_stack **stack_b);
 int		get_max_bits(t_stack *stack);
 void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 void	push_swap(t_stack **stack_a, t_stack **stack_b);
+
+void	sort_two(t_stack **stack_a);
+void	sort_three(t_stack **stack_a);
+void	sort_four(t_stack **stack_a, t_stack **stack_b);
+void	sort_five(t_stack **stack_a, t_stack **stack_b);
 
 #endif

@@ -1,5 +1,4 @@
 shell
-#!/bin/bash
 
 # Quantidade de números
 ARG_SIZE=5
@@ -11,7 +10,7 @@ CHECKER=./checker_linux  # ajuste se necessário
 # Gera os 100 números aleatórios
 ARG=$(shuf -i 0-999 -n $ARG_SIZE | tr '\n' ' ')
 
-echo "📌 Testando com 5 números..."
+echo "📌 Testando com 100 números..."
 echo "Args:"
 echo "$ARG"
 echo "--------------------------------"

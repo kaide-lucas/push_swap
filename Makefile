@@ -9,10 +9,11 @@ SRCS = main.c \
        is_valid_input.c \
        stack_utilis.c \
        normalize.c \
-       push.c \
-       swap.c \
-       rotate.c \
-       reverse.c \
+       op_1_push.c \
+       op_2_reverse.c \
+       op_3_rotate.c \
+       op_4_swap.c \
+       op_5_simple_cases.c \
        push_swap.c
 
 OBJS = $(SRCS:.c=.o)

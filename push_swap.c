@@ -6,7 +6,7 @@
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 13:00:00 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/12/06 13:21:19 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/12/09 15:06:59 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,22 @@ void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 
 void	push_swap(t_stack **stack_a, t_stack **stack_b)
 {
+	int	size;
+
 	if (!stack_a || !*stack_a || is_sorted(*stack_a))
 		return ;
-	normalize_values(*stack_a);
-	radix_sort(stack_a, stack_b);
+	size = stack_size(*stack_a);
+	if (size == 2)
+		sort_two(stack_a);
+	else if (size == 3)
+		sort_three(stack_a);
+	else if (size == 4)
+		sort_four(stack_a, stack_b);
+	else if (size == 5)
+		sort_five(stack_a, stack_b);
+	else
+	{
+		normalize_values(*stack_a);
+		radix_sort(stack_a, stack_b);
+	}
 }
